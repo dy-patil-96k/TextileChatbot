@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TextileX - Dummy Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>TextileX</h1>
+        <p>Premium fabrics for fashion, home, and industrial use.</p>
+        <button>Explore Collections</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="cards">
+        <article class="card">
+          <h2>Cotton Fabrics</h2>
+          <p>Soft, breathable, and ideal for everyday garments.</p>
+        </article>
+        <article class="card">
+          <h2>Polyester Blends</h2>
+          <p>Durable, wrinkle-resistant fabrics for active use.</p>
+        </article>
+        <article class="card">
+          <h2>Technical Textiles</h2>
+          <p>Engineered fabrics for industrial and performance applications.</p>
+        </article>
+      </section>
+    </main>
+
+    <div id="chatbot">
+      <button id="chat-toggle">Chat</button>
+      <div id="chat-window" class="hidden">
+        <div class="chat-header">Textile Assistant</div>
+        <div id="chat-messages">
+          <div class="bot">Hello. Ask me anything about textiles.</div>
+        </div>
+        <form id="chat-form">
+          <input id="chat-input" type="text" placeholder="Type your question..." required />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>
+  </body>
+</html>
